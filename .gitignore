@@ -1,20 +1,40 @@
-# Terraform
-.terraform/
-*.tfstate
-*.tfstate.backup
-crash.log
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
 
-# IDEs
+# Virtual environments
+env/
+venv/
+.venv/
+
+# Logs and outputs
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.bak
+*.tmp
+
+# OpenWPM output
+results/*.sqlite
+results/*.csv
+results/*.png
+results/*.html
+results/screenshots/
+*.har
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# VS Code / PyCharm configs
 .vscode/
 .idea/
 
-# Logs
-*.log
-
-# Python or analysis scripts
-__pycache__/
-*.pyc
-.env
-
 # Misc
-.DS_Store
+*.swp
+*.orig
