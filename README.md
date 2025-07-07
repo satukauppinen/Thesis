@@ -1,44 +1,41 @@
-# Threat Modeling-as-Code: Evaluation and Extension Thesis
+# Browser Fingerprinting and Privacy – Thesis Experiments
 
-This repository supports my bachelor's thesis project on evaluating and extending threat modeling-as-code tools for identifying security and ethical risks in Infrastructure-as-Code (IaC) environments.
+This repository supports my bachelor's thesis experimental part.
 
 ---
 
 ##  Project Goals
 
-- Compare current tools for threat modeling / static analysis of IaC
-- Evaluate effectiveness in detecting ethical and deceptive patterns
-- Extend one tool with support for dark-pattern detection or enhanced privacy modeling
-- Document findings through annotated examples, rule prototypes, and final thesis
+- Explain how browser fingerprinting works from a technical perspective.
+
+- Evaluate popular tools and browsers that aim to prevent fingerprinting.
+
+- Analyze evasion techniques used by trackers to bypass these defenses.
 
 ---
 
-##  Repository Structure
+## Contents (may change if needed)
 
-| Folder | Contents |
-|--------|----------|
-| `/iac-examples/` | Infrastructure-as-Code samples (good vs. deceptive) |
-| `/tool-tests/` | Outputs and logs from Checkov, ThreatSpec, etc. |
-| `/custom-rules/` | Extensions (e.g., Checkov custom rules or Rego policies) |
-| `/docs/` | Evaluation criteria, diagrams, and writeups |
-| `/appendix-code/` | Clean versions of configs used in the final thesis |
-| `/notebooks/` or `/scripts/` | Optional analysis scripts or notebooks |
+-  `openwpm_config/`: Scripts for automated web crawls using OpenWPM
+-  `analysis/`: Jupyter notebooks and Python scripts for data analysis
+-  `manual_tests/`: Results from AmIUnique, Panopticlick, and other test platforms
+-  `test_data/`: Site lists and result files
+-  `screenshots/`: Visual comparisons of test results across browser configurations
 
----
+##  Tools/techniques in Use (not final)
 
-##  Tools in Use
-
-- [Terraform](https://www.terraform.io/)
-- [Checkov](https://www.checkov.io/)
-- [ThreatSpec](https://threatspec.org/)
-- [OPA / Rego](https://www.openpolicyagent.org/)
-- Custom rules / threat annotations
+- Python scripting
+- Linux
+- OpenWPM
+- DB Browser
+- SQLite
+- amiunique
 
 ---
 
-##  Experiments
 
-Each tool is tested against a controlled set of IaC examples. Ethical/deceptive configurations are evaluated for detection and reporting accuracy.
 
----
+
+
+
 
