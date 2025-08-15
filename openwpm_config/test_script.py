@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from typing import Literal
 
-# Import OpenWPM components
+# Importing OpenWPM components
 from openwpm.browser_manager import BrowserManager
 from openwpm.commands.browser_commands import GetCommand
 from openwpm.config import BrowserParams, ManagerParams
@@ -10,7 +10,7 @@ from openwpm.storage.sql_provider import SQLiteStorageProvider
 from openwpm.task_manager import TaskManager
 from openwpm.command_sequence import CommandSequence
 
-# --- Configuration ---
+# The config
 
 FIREFOX_BINARY_PATH = os.path.join(os.getcwd(), 'firefox-bin', 'firefox')
 
@@ -35,7 +35,7 @@ DATABASE_FILE = OUTPUT_DIR / "crawl-data.sqlite"
 LOG_FILE = OUTPUT_DIR / "openwpm.log"
 GECKODRIVER_LOG = OUTPUT_DIR / "geckodriver.log" # Geckodriver logs are crucial for debugging browser issues
 
-# --- Manager and Browser Parameters Setup ---
+# Manager and Browser Parameters Setup 
 
 # Manager parameters
 manager_params = ManagerParams(
@@ -59,16 +59,16 @@ for _ in range(NUM_BROWSERS):
     )
     browser_params.append(browser_param)
 
-# --- Main Crawl Logic ---
+# This Is The Main Crawl Logic
 
 def main():
-    # Ensure the output directory exists
+    # Ensuring the output directory exists
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     print(f"Starting crawl. Output will be saved to: {OUTPUT_DIR.resolve()}")
     print(f"Firefox binary location set to: {FIREFOX_BINARY_PATH} (via os.environ['FIREFOX_BINARY'])")
 
-    # Initialize the TaskManager
+    # Initializing the TaskManager
     try:
         with TaskManager(
             manager_params,
